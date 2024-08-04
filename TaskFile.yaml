@@ -1,0 +1,16 @@
+version: '3'
+
+tasks:
+  migrate:
+    vars:
+      version: '{{default 0 .vers}}'
+    cmds:
+      - go run ./cmd/migrator/postgres/main.go --version={{.version}} --migrations_path=./migrations --config_path=./config/config.yaml
+    silent: true
+    aliases:
+      - mig
+    desc: "run migrator"
+    summary: |
+      run migrator
+      
+      --vers flag sets current version

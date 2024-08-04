@@ -1,0 +1,18 @@
+env: "local" #local, dev, prod
+database_connection:
+  server: "localhost"
+  database: "firstRest"
+  port: 5432
+  username: "StudentUser"
+  password: "12345678"
+  ssl: false
+http_server:
+  address: "localhost:8080"
+  timeout: 4s
+  idle_timeout: 60s
+  user: "myUser"
+  password: "myPass"
+cars:
+  images_path: "D:/Projects/FirstRest/carsImages"
+  images_form_name: "images"
+  default_order_by: "producer" #"producer", "model", "engine_capacity", "power", "images_count"
